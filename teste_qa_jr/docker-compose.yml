@@ -46,12 +46,13 @@ services:
   working_dir: /app
   command: sh -c "npm install --legacy-peer-deps --verbose && npm start"
 
- cypress-run:
+ testes:
   image: cypress/included:13.13.2
   build: ./testes
   container_name: cypress-e2e-testes
   # environment:
-  #   - CYPRESS_baseUrl=http://web
+  #   - CYPRESS_baseUrl=http://frontend
+  #   - CYPRESS_backendUrl=http://backend
   depends_on:
    - frontend
    - backend
