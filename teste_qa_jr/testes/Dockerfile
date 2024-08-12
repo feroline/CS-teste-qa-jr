@@ -1,12 +1,18 @@
 
-FROM cypress/browsers:latest
+FROM cypress/included:13.13.2
 
-WORKDIR /tests
+WORKDIR /testes
 
-COPY ./package.json . 
-COPY ./cypress.config.js .
+COPY ./package.json ./package.json 
+COPY ./cypress.config.js ./cypress.config.js 
 COPY ./cypress ./cypress
+COPY ./node_modules ./node_modules
 
-RUN npm install  
+RUN npm install 
 
-ENTRYPOINT [ "npx", "cypress", "run" ]
+ENV CYPRESS_CONFIG_FILE="cypress.config.js"
+# ENV CYPRESS_RECORD_KEY="your_record_key"
+
+
+# ["executável", "param1", "param2"] 
+ENTRYPOINT [ "npm", "run", "cy:run" ] 
