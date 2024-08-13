@@ -1,0 +1,252 @@
+[
+	{
+		"id_user": "33",
+		"name": "ana carol Teste",
+		"email": "anacarol",
+		"telephone": "63987456158",
+		"birth_date": "2001-02-23",
+		"birth_city": "porto nacional",
+		"show": "0",
+		"companies": " Compliance St..."
+	},
+	{
+		"id_user": "34",
+		"name": "maria",
+		"email": "maria@gmail.com",
+		"telephone": "69878945612",
+		"birth_date": "2002-08-06",
+		"birth_city": "palmas ",
+		"show": "1",
+		"companies": " Contato Segur..."
+	},
+	{
+		"id_user": "35",
+		"name": "asdasd",
+		"email": "asdas",
+		"telephone": "asd",
+		"birth_date": "2024-08-11",
+		"birth_city": "asdas",
+		"show": "1",
+		"companies": " Compliance St..."
+	},
+	{
+		"id_user": "36",
+		"name": "ASDQW",
+		"email": "QW",
+		"telephone": "QW",
+		"birth_date": "2024-08-11",
+		"birth_city": "QW",
+		"show": "1",
+		"companies": " Compliance St..."
+	},
+	{
+		"id_user": "37",
+		"name": "sdfsdf",
+		"email": "sdfsdf",
+		"telephone": "",
+		"birth_date": "2024-08-11",
+		"birth_city": "",
+		"show": "1",
+		"companies": " Compliance St..."
+	},
+	{
+		"id_user": "38",
+		"name": "pereira",
+		"email": "pereira",
+		"telephone": "",
+		"birth_date": "1542-08-11",
+		"birth_city": "",
+		"show": "1",
+		"companies": " Compliance St..."
+	},
+	{
+		"id_user": "39",
+		"name": "inexistente",
+		"email": "inexistente",
+		"telephone": "",
+		"birth_date": "2024-08-11",
+		"birth_city": "",
+		"show": "1",
+		"companies": " Compliance St..."
+	},
+	{
+		"id_user": "40",
+		"name": "  ",
+		"email": "  ",
+		"telephone": "  ",
+		"birth_date": "2024-08-11",
+		"birth_city": "  ",
+		"show": "1",
+		"companies": " Contato Segur..."
+	},
+	{
+		"id_user": "41",
+		"name": " ",
+		"email": " ",
+		"telephone": " ",
+		"birth_date": "2024-08-11",
+		"birth_city": " ",
+		"show": "1",
+		"companies": " Compliance St..."
+	},
+	{
+		"id_user": "42",
+		"name": "dsfsdf",
+		"email": "sdfsdf",
+		"telephone": "sdfsdf",
+		"birth_date": "0546-06-25",
+		"birth_city": "sdf",
+		"show": "1",
+		"companies": " Compliance To..."
+	},
+	{
+		"id_user": "43",
+		"name": "texto aleatório com car4ctere$ e$peciais e número5. texto aleatório com car4ctere$ e$peciais e número5. texto aleatório com car4ctere$ e$peciais e número5. texto aleatório com car4ctere$ e$peciais e número5. texto aleatório com car4ctere$ e$peciais e núme",
+		"email": "texto aleatório com car4ctere$ e$peciais e número5. texto aleatório com car4ctere$ e$peciais e número5. texto aleatório com car4ctere$ e$peciais e número5. texto aleatório com car4ctere$ e$peciais e número5. texto aleatório com car4ctere$ e$peciais e núme",
+		"telephone": "texto aleatório com car4ctere$ e$peciais e número5. texto aleatório com car4ctere$ e$peciais e número5. texto aleatório com car4ctere$ e$peciais e número5. texto aleatório com car4ctere$ e$peciais e número5. texto aleatório com car4ctere$ e$peciais e núme",
+		"birth_date": "2024-08-06",
+		"birth_city": "texto aleatório com car4ctere$ e$peciais e número5. texto aleatório com car4ctere$ e$peciais e número5. texto aleatório com car4ctere$ e$peciais e número5. texto aleatório com car4ctere$ e$peciais e número5. texto aleatório com car4ctere$ e$peciais e núme",
+		"show": "0",
+		"companies": " Compliance St..."
+	},
+	{
+		"id_user": "44",
+		"name": "texto com mais de 256 caracteres texto com mais de 256 caracteres texto com mais de 256 caracteres texto com mais de 256 caracteres texto com mais de 256 caracterestexto com mais de 256 caracteres texto com mais de 256 caracteres. FINAL DO TEXTO PARA VERI",
+		"email": "texto com mais de 256 caracteres texto com mais de 256 caracteres texto com mais de 256 caracteres texto com mais de 256 caracteres texto com mais de 256 caracterestexto com mais de 256 caracteres texto com mais de 256 caracteres. FINAL DO TEXTO PARA VERI",
+		"telephone": "texto com mais de 256 caracteres texto com mais de 256 caracteres texto com mais de 256 caracteres texto com mais de 256 caracteres texto com mais de 256 caracterestexto com mais de 256 caracteres texto com mais de 256 caracteres. FINAL DO TEXTO PARA VERI",
+		"birth_date": "2024-08-11",
+		"birth_city": "texto com mais de 256 caracteres texto com mais de 256 caracteres texto com mais de 256 caracteres texto com mais de 256 caracteres texto com mais de 256 caracterestexto com mais de 256 caracteres texto com mais de 256 caracteres. FINAL DO TEXTO PARA VERI",
+		"show": "1",
+		"companies": " Compliance St..."
+	},
+	{
+		"id_user": "45",
+		"name": "asdasd",
+		"email": "asdasd",
+		"telephone": "asda",
+		"birth_date": "2024-08-12",
+		"birth_city": "asd",
+		"show": "1",
+		"companies": " Compliance St..."
+	},
+	{
+		"id_user": "55",
+		"name": "ana maria braga",
+		"email": "anamariabraga@gmail.com",
+		"telephone": "8465432132",
+		"birth_date": "1000-05-25",
+		"birth_city": "porto alegre",
+		"show": "1",
+		"companies": " Compliance St..."
+	},
+	{
+		"id_user": "56",
+		"name": "ana maria braga",
+		"email": "anamariabraga@gmail.com",
+		"telephone": "8465432132",
+		"birth_date": "1000-05-25",
+		"birth_city": "porto alegre",
+		"show": "1",
+		"companies": " Compliance St..."
+	},
+	{
+		"id_user": "57",
+		"name": "ana maria braga",
+		"email": "anamariabraga@gmail.com",
+		"telephone": "8465432132",
+		"birth_date": null,
+		"birth_city": null,
+		"show": "1",
+		"companies": " Compliance St..."
+	},
+	{
+		"id_user": "58",
+		"name": "ana maria braga",
+		"email": "anamariabraga@gmail.com",
+		"telephone": "8465432132",
+		"birth_date": null,
+		"birth_city": null,
+		"show": "1",
+		"companies": " Compliance St..."
+	},
+	{
+		"id_user": "59",
+		"name": "ana maria braga",
+		"email": "anamariabraga@gmail.com",
+		"telephone": "8465432132",
+		"birth_date": null,
+		"birth_city": null,
+		"show": "1",
+		"companies": " Compliance St..."
+	},
+	{
+		"id_user": "60",
+		"name": "ana maria braga",
+		"email": "anamariabraga@gmail.com",
+		"telephone": "8465432132",
+		"birth_date": null,
+		"birth_city": null,
+		"show": "1",
+		"companies": " Compliance St..."
+	},
+	{
+		"id_user": "61",
+		"name": "ana maria braga",
+		"email": "anamariabraga@gmail.com",
+		"telephone": "8465432132",
+		"birth_date": null,
+		"birth_city": null,
+		"show": "1",
+		"companies": " Compliance St..."
+	},
+	{
+		"id_user": "62",
+		"name": "ana maria braga",
+		"email": "anamariabraga@gmail.com",
+		"telephone": null,
+		"birth_date": null,
+		"birth_city": null,
+		"show": "1",
+		"companies": " Compliance St..."
+	},
+	{
+		"id_user": "63",
+		"name": "ana maria braga",
+		"email": "anamariabraga@gmail.com",
+		"telephone": null,
+		"birth_date": null,
+		"birth_city": null,
+		"show": "1",
+		"companies": " Compliance St..."
+	},
+	{
+		"id_user": "64",
+		"name": "ana maria braga",
+		"email": "anamariabraga@gmail.com",
+		"telephone": null,
+		"birth_date": null,
+		"birth_city": null,
+		"show": "1",
+		"companies": " Compliance St..."
+	},
+	{
+		"id_user": "65",
+		"name": "ana maria braga",
+		"email": "anamariabraga@gmail.com",
+		"telephone": null,
+		"birth_date": null,
+		"birth_city": null,
+		"show": "1",
+		"companies": " Compliance St..."
+	},
+	{
+		"id_user": "66",
+		"name": "ana maria braga",
+		"email": "anamariabraga@gmail.com",
+		"telephone": null,
+		"birth_date": null,
+		"birth_city": null,
+		"show": "0",
+		"companies": " Compliance St..."
+	}
+]
