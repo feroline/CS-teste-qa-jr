@@ -3,44 +3,42 @@ Feature: Criar usuário
   Eu quero acessar a tela home e conseguir criar um usuário
 
   # PARTIÇÃO VÁLIDA
+  # TODO Refatorar cenários para que os locators fiquem apenas no arquivo de locators e não seja passado como parametro
   #   TODO: adicionar background a um arquivo geral de features
   Background: Frontend
-    Given que acesso a url "http://localhost:5400/home"
-    Then a url deve conter "/home" em seu caminho
+    Given que acesso a url "http://localhost:5400"
 
   @focus
   Scenario: [TC-O6] - Verificar apresentação e fechamento do modal de Cadastro
-    Given que eu tenho o botão "Novo usuário"
-    When clico no botão "Novo usuário"
+    Given que clico no botão de adicionar usuário
     Then o modal fica visível
     And o texto "Cadastrar novo usuário" é apresentado
-    When clico no botão "react-modal-close"
+    When clico no botão fechar modal
     Then o modal fica invisível
 
+  @focus
   Scenario:[TC-07] - Cadastrar usuário com todos os dados
-    Given que eu tenho o modal de cadastro visível
-    And preencho os campos com os dados
-      | campo              | dado            |
-      | Nome               | Maria           |
-      | Email              | email@gmail.com |
-      | Telefone           | 65897584685     |
-      | Data de nascimento | 23/02/2001      |
-      | Empresas           | Empresa 1       |
-    When clico no botão "Salvar"
-    Then devo ver os dados desse usuário na tela inicial
+    And que eu tenho o modal de cadastro visível
+    When preencho os campos com os dados
+      | nome  | email           | telefone    | cidade         | data       | empresas  |
+      | Maria | email@gmail.com | 65897584685 | Porto Nacional | 2001-02-23 | Empresa 1 |
+    And clico no botão Salvar
+    Then devo ter os dados dos usuários visíveis na tabela
+      | nome  | email           | telefone    | cidade         | data       | empresas  |
+      | Maria | email@gmail.com | 65897584685 | Porto Nacional | 2001-02-23 | Empresa 1 |
 
-  Scenario Outline: [TC-08][TC-09][TC-10][TC-11][TC-12][TC-13] - Verificar campos do cadastro de novo usuário
+  Scenario Outline: [TC-08][TC-09][TC-10][TC-11][TC-12][TC-13] - Verificar required para campos do cadastro de novo usuário
     Given que eu tenho o modal de cadastro visível
     Then devo ter o input <input> do tipo <inputType>
     And <isRequired> para o atributo required
     Examples:
-      | TC | input                | inputType | isRequired |
-      | 08 | Nome                 | text      | true       |
-      | 09 | E-mail               | email     | true       |
-      | 10 | Telefone             | text      | true       |
-      | 11 | Cidade de nascimento | text      | false      |
-      | 12 | Data de nascimento   | date      | true       |
-      | 13 | Empresas             | text      | true       |
+      | input                | inputType | isRequired |
+      | Nome                 | text      | true       |
+      | E-mail               | email     | true       |
+      | Telefone             | text      | true       |
+      | Cidade de nascimento | text      | false      |
+      | Data de nascimento   | date      | true       |
+      | Empresas             | text      | true       |
 
   Scenario: [TC-14] - Verificar se a seleção de empresa é apresentada
     Given que eu tenho o modal de cadastro visível
@@ -188,4 +186,3 @@ Feature: Criar usuário
     And preencho o campo "Email" com "emailInválido"
     When clico no botão "Salvar"
     Then devo ver a mensagem "Formato de E-mail inválido"
-

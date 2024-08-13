@@ -4,40 +4,31 @@ Feature: Leitura dos dados Home
   cadastrados.
 
   Background: Frontend
-    Given que acesso a url "http://localhost:5400/home"
-    Then a url deve conter "/home" em seu caminho
+    Given que acesso a url "http://localhost:5400"
 
   @focus
   Scenario: [TC-O1] - Verificar URL
-    Given que estou na tela inicial Home
+    Given que estou na tela inicial
+    When acesso "/home"
     Then a url deve conter "/home" em seu caminho
 
   Scenario: [TC-02] - Verificar Logo da empresa
-    Given que estou na tela inicial Home
+    Given que estou na tela inicial
     Then a imagem "data:image/png;base64,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" deverá ser apresentada
 
-
+  @focus
   Scenario: [TC-03] - Verificar colunas da tabela de usuários
-    Given que estou na tela inicial Home
+    Given que estou na tela inicial
     And que tenho uma tabela de usuários
-    Then tenho a coluna "Nome" visível
-    And tenho a coluna "Email" visível
-    And tenho a coluna "Telefone" visível
-    And tenho a coluna "Nascimento" visível
-    And tenho a coluna "Cidade" visível
-    And tenho a coluna "Empresas" visível
-
+    Then tenho as colunas a seguir visíveis na tabela
+      | Nome | Email | Telefone | Nascimento | Cidade | Empresas |
 
   @focus
-  Scenario: [TC-04] - Verificar tabela com múltiplos usuários
-    Given que estou na tela inicial Home
-    And que os seguintes usuários estão cadastrados:
-      | nome         | email                 | telefone        | nascimento | cidade            | empresas  |
-      | Ana Carolina | anacarolina@gmail.com | (63) 98795-4598 | 23/02/2001 | Porto Nacional-TO | Empresa 2 |
-      | Mario        | mario@gmail.com       | (63) 99795-4798 | 25/08/1987 | Palmas-TO         | Empresa 2 |
-      | Maria        | maria@gmail.com       | (63) 98795-4598 | 05/08/1987 | Palmas-TO         | Empresa 1 |
-      | Pereira      | pereira@gmail.com     | (63) 99795-4798 | 25/08/1987 | Porto Nacional-TO | Empresa 2 |
+  Scenario: [TC-04] - Verificar tabela com usuário
+    Given que estou na tela inicial
     Then devo ter os dados dos usuários visíveis na tabela
+      | nome  | email           | telefone    | cidade         | data       | empresas  |
+      | Maria | email@gmail.com | 65897584685 | Porto Nacional | 2001-02-23 | Empresa 1 |
 
   Scenario:[TC-05] - Verificar tabela com nenhum usuário cadastrado
     Given que não tenho usuários cadastrados

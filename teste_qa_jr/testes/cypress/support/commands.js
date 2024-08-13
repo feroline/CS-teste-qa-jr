@@ -23,3 +23,9 @@
 //
 // -- This will overwrite an existing command --
 // Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
+
+Cypress.Commands.add('isModalVisible', (isVisible, modalContent) => {
+	isVisible
+		? cy.get(modalContent).should('be.visible')
+		: cy.get(modalContent).should('not.exist');
+});
