@@ -1,0 +1,12 @@
+{
+	"name": "compania QA",
+	"adress": {
+		"cep": "69160-970",
+		"country": "Brasil",
+		"state": "MA",
+		"city": "Barreirinha",
+		"street": "Rua do Terra Preta Castanhal 700",
+		"number": "10",
+		"district": "São Judas Tadeu"
+	}
+}
