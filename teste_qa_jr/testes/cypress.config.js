@@ -16,6 +16,10 @@ async function setupNodeEvents(on, config) {
 }
 
 module.exports = defineConfig({
+	env: {
+		baseUrlFrontend: 'http://localhost:5400',
+		baseUrlBackend: 'http://localhost:8400',
+	},
 	e2e: {
 		specPattern: '**/*.feature',
 		setupNodeEvents,

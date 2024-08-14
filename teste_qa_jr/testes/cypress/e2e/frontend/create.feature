@@ -1,10 +1,7 @@
-# @ignore-this utilzada para ignorar todos os cenários da feature
 Feature: Criar usuário
   Eu quero acessar a tela home e conseguir criar um usuário
 
   # PARTIÇÃO VÁLIDA
-  # TODO Refatorar cenários para que os locators fiquem apenas no arquivo de locators e não seja passado como parametro
-  #   TODO: adicionar background a um arquivo geral de features
   Background: Frontend
     Given que acesso a url "http://localhost:5400"
 

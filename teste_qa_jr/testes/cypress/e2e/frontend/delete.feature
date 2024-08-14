@@ -1,8 +1,7 @@
-# @ignore-this utilzada para ignorar todos os cenários da feature
+
 Feature: Deletar usuário
     Eu quero acessar a tela home e conseguir deletar um usuário listado
 
-    #   TODO: adicionar background a um arquivo geral de features
     Background: Frontend
         Given que acesso a url "http://localhost:5400/home"
         Then a url deve conter "/home" em seu caminho

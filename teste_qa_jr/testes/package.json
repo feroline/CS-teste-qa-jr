@@ -6,7 +6,7 @@
 		"cypress-signalr-mock": "^1.5.0"
 	},
 	"scripts": {
-		"cy:run": "npx cypress run",
+		"cy:run": "npx cypress run TAGS=@focus",
 		"cy:open": "npx cypress open"
 	},
 	"@badeball/cypress-cucumber-preprocessor": {

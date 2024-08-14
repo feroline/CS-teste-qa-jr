@@ -11,8 +11,7 @@ COPY ./node_modules ./node_modules
 RUN npm install 
 
 ENV CYPRESS_CONFIG_FILE="cypress.config.js"
-# ENV CYPRESS_RECORD_KEY="your_record_key"
+# TODO adicionar chave de gravação
+# ENV CYPRESS_RECORD_KEY="record_key"
 
-
-# ["executável", "param1", "param2"] 
 ENTRYPOINT [ "npm", "run", "cy:run" ] 

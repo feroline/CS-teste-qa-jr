@@ -3,8 +3,7 @@
 import { Given, When, Then } from '@badeball/cypress-cucumber-preprocessor';
 import { colunaTableTh, linhaTableTr } from '../../locators/homeLocators';
 
-// FIXME: Ao adicionar baseUrl ao config a url não é carregada. A seguinte forma será utilizada temporáriamente, mas não é uma boa prática
-const baseUrl = 'http://localhost:5400';
+const baseUrl = Cypress.env('baseUrlFrontend');
 
 //  ---- GIVEN ----
 

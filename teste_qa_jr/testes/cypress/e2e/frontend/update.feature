@@ -1,9 +1,7 @@
-# @ignore-this utilzada para ignorar todos os cenários da feature
 Feature: Editar usuário
     Eu quero acessar a tela home e conseguir editar um usuário listado
 
     # PARTIÇÃO VÁLIDA
-    #   TODO: adicionar background a um arquivo geral de features
     Background: Frontend
         Given que acesso a url "http://localhost:5400"
 
