@@ -14,7 +14,6 @@ Given('que estou na tela inicial', () => {
 	cy.url().should('be.equal', `${baseUrl}/`);
 });
 
-// TODO: pegar usuários
 Given('devo ter os dados dos usuários visíveis na tabela', (dataTable) => {
 	let usuarios = dataTable.hashes();
 

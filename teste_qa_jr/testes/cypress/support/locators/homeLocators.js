@@ -4,3 +4,4 @@ export const colunaTableTh = 'table th';
 export const novoUsuarioBtn = 'button#new-user';
 export const modalContent = 'div.react-modal-content';
 export const closeModal = 'button.react-modal-close';
+export const editUserBtn = 'table>tbody>tr>td>button>img[alt="edit"]';

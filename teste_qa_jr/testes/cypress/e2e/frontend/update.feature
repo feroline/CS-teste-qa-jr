@@ -5,21 +5,20 @@ Feature: Editar usuário
     # PARTIÇÃO VÁLIDA
     #   TODO: adicionar background a um arquivo geral de features
     Background: Frontend
-        Given que acesso a url "http://localhost:5400/home"
-        Then a url deve conter "/home" em seu caminho
+        Given que acesso a url "http://localhost:5400"
 
     @focus
     Scenario: [TC-30] - Verificar apresentação e fechamento do modal de Edição
-        Given que eu tenho o botão "edit" apresentado na listagem
-        When clico no botão "edit" do primeiro item da listagem
+        Given que eu tenho o botão de editar apresentado na listagem
+        When que eu tenho o botão de Editar do primeiro item da listagem
         Then o modal fica visível
         And o texto "Editar usuário" é apresentado
-        When clico no botão "react-modal-close"
+        When clico no botão fechar modal
         Then o modal fica invisível
 
     Scenario: [TC-31] - Verificar apresentação dos dados do usuário na Edição
-        Given que eu tenho o botão "edit" apresentado na listagem
-        When clico no botão "edit" do primeiro item da listagem
+        Given que eu tenho o botão de editar apresentado na listagem
+        When que eu tenho o botão de Editar do primeiro item da listagem
         Then os dados do usuário selecionado devem ser apresentados em seus respectivos campos
 
     Scenario:[TC-32] - Editar usuário com todos os dados
@@ -194,6 +193,6 @@ Feature: Editar usuário
         Then devo ver a mensagem "Formato de E-mail inválido"
 
     Scenario: [TC-55] - Verificar ícone
-        Given que eu tenho o botão "edit" apresentado na listagem
+        Given que eu tenho o botão de editar apresentado na listagem
         Then o ícone deve ser igual a "http://localhost:5400/static/media/edit.c616ad0b.png"
 
