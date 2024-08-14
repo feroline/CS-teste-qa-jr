@@ -4,7 +4,7 @@ Feature: Get All Users
 
     #TODO: adicionar background e arquivo separado para ser utilizado por todos os cenários
     Background: Backend
-        Given rota base é "http://localhost:8400"
+        Given que a rota base está OK
 
     @focus
     Scenario: [TC-60] - Pegar todos os usuários cadastrados

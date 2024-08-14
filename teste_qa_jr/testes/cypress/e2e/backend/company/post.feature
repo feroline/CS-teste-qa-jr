@@ -4,7 +4,7 @@ Feature: Create Company
 
     #TODO: adicionar background e arquivo separado para ser utilizado por todos os cenários
     Background: Backend
-        Given rota base é "http://localhost:8400"
+        Given que a rota base está OK
 
     @focus
     Scenario: [TC-79] - Criar compania com todos os dados obrigatórios

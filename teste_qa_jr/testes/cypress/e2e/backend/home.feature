@@ -4,11 +4,11 @@ Feature: Get dados Home
 
     #TODO: adicionar background e arquivo separado para ser utilizado por todos os cenários
     Background: Backend
-        Given rota base é "http://localhost:8400"
+        Given que a rota base está OK
 
     @focus
     Scenario: [TC-59] - Verificar mensagem da rota
         Given que estou na rota "/"
-        Then devo receber o objeto da fixture "home/get.json" como resposta
+        Then devo receber o objeto da fixture "/home/get.json" como resposta
         And devo receber o código "200"
 

@@ -2,7 +2,8 @@
 	"devDependencies": {
 		"@badeball/cypress-cucumber-preprocessor": "^20.1.2",
 		"@cucumber/cucumber": "^10.8.0",
-		"cypress": "13.13.2"
+		"cypress": "13.13.2",
+		"cypress-signalr-mock": "^1.5.0"
 	},
 	"scripts": {
 		"cy:run": "npx cypress run",
