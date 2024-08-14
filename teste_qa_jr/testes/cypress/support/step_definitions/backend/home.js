@@ -27,5 +27,5 @@ Then('devo receber o objeto da fixture {string} como resposta', (fixture) => {
 
 Then('devo receber o código {string}', (codigo) => {
 	//valida o status da rota de acordo com o código passado
-	expect(getResponse().status).to.equal(Number(codigo));
+	cy.validateStatus(getResponse(), Number(codigo));
 });

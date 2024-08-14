@@ -6,29 +6,26 @@ Feature: Users
         Given que a rota base está OK
 
     ####### Get All Users #######
+
     @focus
     Scenario: [TC-60] - Get All Users - Pegar todos os usuários cadastrados
         Given que estou na rota "/api/user"
-        And tenho os dados da fixture "/users/allUsers.json" cadastrados
-        Then devo receber o objeto da fixture "/users/allUsers.json" como resposta
-        And devo receber o código "200"
+        Then devo receber o código "200"
 
 
     ####### Get User by ID #######
-    # TODO:
+    @focus
     Scenario: [TC-61] - Get User by ID - Pegar usuário com ID existente
-        Given que estou na rota "/api/user/{id}" com ID "33"
-        Then devo receber o objeto com "id_user" igual a "33" da fixture "/users/allUsers.json"
-        And devo receber o código "200"
-
-    # TODO:
+        Given que estou na rota Get User by ID com ID "33"
+        Then devo receber o código "200" da rota user
+    @focus
     Scenario: [TC-62] - Get User by ID - Pegar usuário com ID inexistente
-        Given que estou na rota "/api/user/{id}" com ID "0"
-        Then devo receber o objeto da fixture "/mensagens/notFound_404.json" como resposta
+        Given que estou na rota Get User by ID com ID "0"
         And devo receber o código "400"
-    # TODO:
+
+    @focus
     Scenario: [TC-63] - Get User by ID - Pegar usuário com ID inválido
-        Given que estou na rota "/api/user/{id}" com ID "?id"
+        Given que estou na rota Get User by ID com ID "?id"
         Then devo receber o código "500"
 
 

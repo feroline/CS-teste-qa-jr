@@ -8,6 +8,13 @@ declare namespace Cypress {
 		 * @param {string} locator - elemento a ser localizado
 		 * @example cy.isVisible(true,'#id-elemento')
 		 */
-		isVisible(visible: boolean, locator: string): Chainable<any>;
+		isVisible(visible: boolean, locator: string): Chainable;
+		/***
+		 * Valida status da resposta recebida, se ele é igual ao estado esperado
+		 * @param {Cypress.RequestBody<Object>} response - resposta recebida
+		 * @param {number} status - status esperado
+		 * @example validateStatus(getResponse(),200);
+		 */
+		validateStatus(response: object, status: number): Chainable;
 	}
 }
