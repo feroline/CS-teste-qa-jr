@@ -1,3 +1,5 @@
+/// <reference types="cypress"/>
+
 import { Given, When, Then } from '@badeball/cypress-cucumber-preprocessor';
 import {
 	nameInput,
@@ -23,7 +25,7 @@ Given('que clico no botão de adicionar usuário', () => {
 
 Given('que eu tenho o modal de cadastro visível', () => {
 	cy.get(novoUsuarioBtn).click();
-	cy.isModalVisible(true, modalContent);
+	cy.isVisible(true, modalContent);
 });
 
 Given('preencho os campos com os dados', (dataTable) => {
@@ -48,7 +50,7 @@ When('clico no botão Salvar', () => {
 });
 
 Then('o modal fica visível', () => {
-	cy.isModalVisible(true, modalContent);
+	cy.isVisible(true, modalContent);
 });
 
 //  ---- THEN ----
@@ -58,5 +60,5 @@ Then('o texto {string} é apresentado', (text) => {
 });
 
 Then('o modal fica invisível', () => {
-	cy.isModalVisible(false, modalContent);
+	cy.isVisible(false, modalContent);
 });

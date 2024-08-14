@@ -5,3 +5,6 @@ export const novoUsuarioBtn = 'button#new-user';
 export const modalContent = 'div.react-modal-content';
 export const closeModal = 'button.react-modal-close';
 export const editUserBtn = 'table>tbody>tr>td>button>img[alt="edit"]';
+export const deleteUserBtn = 'table>tbody>tr>td>button>img[alt="delete"]';
+export const sweetAlert = 'div.swal2-modal';
+export const sweetAlertConfirm = 'button.swal2-confirm';

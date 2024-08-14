@@ -17,7 +17,7 @@ Feature: Criar usuário
     Then o modal fica invisível
 
   @focus
-  Scenario:[TC-07] - Cadastrar usuário com todos os dados
+  Scenario:[TC-07] - Cadastrar usuário com todos os dados e verificar cadastro
     And que eu tenho o modal de cadastro visível
     When preencho os campos com os dados
       | nome  | email           | telefone    | cidade         | data       | empresas  |
@@ -70,7 +70,7 @@ Feature: Criar usuário
       | Telefone           | 65897584685     |
       | Data de nascimento | 23/02/2001      |
       | Empresas           | Empresa 1       |
-    When clico no botão "Salvar"
+    When clico no botão Salvar
     Then devo ver a mensagem "Preencha este campo"
 
   Scenario:[TC-18] - Verificar obrigatoriedade do campo Nome com espaços em branco
@@ -82,7 +82,7 @@ Feature: Criar usuário
       | Telefone           | 65897584685     |
       | Data de nascimento | 23/02/2001      |
       | Empresas           | Empresa 1       |
-    When clico no botão "Salvar"
+    When clico no botão Salvar
     Then devo ver a mensagem "Preencha este campo"
 
   Scenario:[TC-19] - Verificar obrigatoriedade do campo E-mail
@@ -93,7 +93,7 @@ Feature: Criar usuário
       | Telefone           | 65897584685 |
       | Data de nascimento | 23/02/2001  |
       | Empresas           | Empresa 1   |
-    When clico no botão "Salvar"
+    When clico no botão Salvar
     Then devo ver a mensagem "Preencha este campo"
 
   Scenario:[TC-20] - Verificar obrigatoriedade do campo E-mail com espaços em branco
@@ -105,7 +105,7 @@ Feature: Criar usuário
       | Telefone           | 65897584685 |
       | Data de nascimento | 23/02/2001  |
       | Empresas           | Empresa 1   |
-    When clico no botão "Salvar"
+    When clico no botão Salvar
     Then devo ver a mensagem "Preencha este campo"
 
   Scenario:[TC-21] - Verificar obrigatoriedade do campo Telefone
@@ -116,7 +116,7 @@ Feature: Criar usuário
       | Email              | email@gmail.com |
       | Data de nascimento | 23/02/2001      |
       | Empresas           | Empresa 1       |
-    When clico no botão "Salvar"
+    When clico no botão Salvar
     Then devo ver a mensagem "Preencha este campo"
 
   Scenario:[TC-22] - Verificar obrigatoriedade do campo Telefone com espaços em branco
@@ -128,7 +128,7 @@ Feature: Criar usuário
       | Telefone           |                 |
       | Data de nascimento | 23/02/2001      |
       | Empresas           | Empresa 1       |
-    When clico no botão "Salvar"
+    When clico no botão Salvar
     Then devo ver a mensagem "Preencha este campo"
 
   Scenario:[TC-23] - Verificar obrigatoriedade do campo Data de Nascimento
@@ -139,7 +139,7 @@ Feature: Criar usuário
       | Email    | email@gmail.com |
       | Telefone | 65897584685     |
       | Empresas | Empresa 1       |
-    When clico no botão "Salvar"
+    When clico no botão Salvar
     Then devo ver a mensagem "Preencha este campo"
 
   Scenario:[TC-24] - Verificar obrigatoriedade do campo Empresas
@@ -150,7 +150,7 @@ Feature: Criar usuário
       | Email              | email@gmail.com |
       | Telefone           | 65897584685     |
       | Data de nascimento | 23/02/2001      |
-    When clico no botão "Salvar"
+    When clico no botão Salvar
     Then devo ver a mensagem "Preencha este campo"
 
   Scenario:[TC-25] - Verificar obrigatoriedade do campo Empresas com espaços em branco
@@ -162,13 +162,13 @@ Feature: Criar usuário
       | Telefone           | 65897584685     |
       | Data de nascimento | 23/02/2001      |
       | Empresas           |                 |
-    When clico no botão "Salvar"
+    When clico no botão Salvar
     Then devo ver a mensagem "Preencha este campo"
 
   Scenario Outline: [TC-26] [TC-27] - Inserir datas inválidas em Data de Nascimento
     Given que eu tenho o modal de cadastro visível
     And preencho o campo "Data de nascimento" com <tipoValorData>
-    When clico no botão "Salvar"
+    When clico no botão Salvar
     Then devo ver a mensagem "Data inválida"
     Examples:
       | TC | tipoValorData |
@@ -178,11 +178,11 @@ Feature: Criar usuário
   Scenario: [TC-28] - Inserir empresa inexistente
     Given que eu tenho o modal de cadastro visível
     And preencho o campo "Empresas" com "EmpresaInexistente"
-    When clico no botão "Salvar"
+    When clico no botão Salvar
     Then devo ver a mensagem "Empresa não cadastrada"
 
   Scenario: [TC-29] - Inserir E-mail com formato inválido
     Given que eu tenho o modal de cadastro visível
     And preencho o campo "Email" com "emailInválido"
-    When clico no botão "Salvar"
+    When clico no botão Salvar
     Then devo ver a mensagem "Formato de E-mail inválido"

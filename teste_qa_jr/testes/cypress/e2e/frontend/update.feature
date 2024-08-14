@@ -10,7 +10,7 @@ Feature: Editar usuário
     @focus
     Scenario: [TC-30] - Verificar apresentação e fechamento do modal de Edição
         Given que eu tenho o botão de editar apresentado na listagem
-        When que eu tenho o botão de Editar do primeiro item da listagem
+        When eu clico no botão Editar do primeiro item da listagem
         Then o modal fica visível
         And o texto "Editar usuário" é apresentado
         When clico no botão fechar modal
@@ -18,7 +18,7 @@ Feature: Editar usuário
 
     Scenario: [TC-31] - Verificar apresentação dos dados do usuário na Edição
         Given que eu tenho o botão de editar apresentado na listagem
-        When que eu tenho o botão de Editar do primeiro item da listagem
+        When eu clico no botão Editar do primeiro item da listagem
         Then os dados do usuário selecionado devem ser apresentados em seus respectivos campos
 
     Scenario:[TC-32] - Editar usuário com todos os dados
@@ -29,7 +29,7 @@ Feature: Editar usuário
             | Telefone           | 65897584995             |
             | Data de nascimento | 23/02/1989              |
             | Empresas           | Empresa 1               |
-        When clico no botão "Salvar"
+        When clico no botão Salvar
         Then devo ver os dados desse usuário na tela inicial
 
     Scenario Outline: [TC-33][TC-34][TC-35][TC-36][TC-37][TC-38] - Verificar campos de Edição de usuário
@@ -75,7 +75,7 @@ Feature: Editar usuário
             | Telefone           | 65897584685     |
             | Data de nascimento | 23/02/2001      |
             | Empresas           | Empresa 1       |
-        When clico no botão "Salvar"
+        When clico no botão Salvar
         Then devo ver a mensagem "Preencha este campo"
 
     Scenario:[TC-43] - Verificar obrigatoriedade do campo Nome com espaços em branco
@@ -87,7 +87,7 @@ Feature: Editar usuário
             | Telefone           | 65897584685     |
             | Data de nascimento | 23/02/2001      |
             | Empresas           | Empresa 1       |
-        When clico no botão "Salvar"
+        When clico no botão Salvar
         Then devo ver a mensagem "Preencha este campo"
 
     Scenario:[TC-44] - Verificar obrigatoriedade do campo E-mail
@@ -98,7 +98,7 @@ Feature: Editar usuário
             | Telefone           | 65897584685 |
             | Data de nascimento | 23/02/2001  |
             | Empresas           | Empresa 1   |
-        When clico no botão "Salvar"
+        When clico no botão Salvar
         Then devo ver a mensagem "Preencha este campo"
 
     Scenario:[TC-45] - Verificar obrigatoriedade do campo E-mail com espaços em branco
@@ -110,7 +110,7 @@ Feature: Editar usuário
             | Telefone           | 65897584685 |
             | Data de nascimento | 23/02/2001  |
             | Empresas           | Empresa 1   |
-        When clico no botão "Salvar"
+        When clico no botão Salvar
         Then devo ver a mensagem "Preencha este campo"
 
     Scenario:[TC-46] - Verificar obrigatoriedade do campo Telefone
@@ -121,7 +121,7 @@ Feature: Editar usuário
             | Email              | email@gmail.com |
             | Data de nascimento | 23/02/2001      |
             | Empresas           | Empresa 1       |
-        When clico no botão "Salvar"
+        When clico no botão Salvar
         Then devo ver a mensagem "Preencha este campo"
 
     Scenario:[TC-47] - Verificar obrigatoriedade do campo Telefone com espaços em branco
@@ -133,7 +133,7 @@ Feature: Editar usuário
             | Telefone           |                 |
             | Data de nascimento | 23/02/2001      |
             | Empresas           | Empresa 1       |
-        When clico no botão "Salvar"
+        When clico no botão Salvar
         Then devo ver a mensagem "Preencha este campo"
 
     Scenario:[TC-48] - Verificar obrigatoriedade do campo Data de Nascimento
@@ -144,7 +144,7 @@ Feature: Editar usuário
             | Email    | email@gmail.com |
             | Telefone | 65897584685     |
             | Empresas | Empresa 1       |
-        When clico no botão "Salvar"
+        When clico no botão Salvar
         Then devo ver a mensagem "Preencha este campo"
 
     Scenario:[TC-49] - Verificar obrigatoriedade do campo Empresas
@@ -155,7 +155,7 @@ Feature: Editar usuário
             | Email              | email@gmail.com |
             | Telefone           | 65897584685     |
             | Data de nascimento | 23/02/2001      |
-        When clico no botão "Salvar"
+        When clico no botão Salvar
         Then devo ver a mensagem "Preencha este campo"
 
     Scenario:[TC-50] - Verificar obrigatoriedade do campo Empresas com espaços em branco
@@ -167,13 +167,13 @@ Feature: Editar usuário
             | Telefone           | 65897584685     |
             | Data de nascimento | 23/02/2001      |
             | Empresas           |                 |
-        When clico no botão "Salvar"
+        When clico no botão Salvar
         Then devo ver a mensagem "Preencha este campo"
 
     Scenario Outline: [TC-51] [TC-52] - Inserir datas inválidas em Data de Nascimento
         Given que eu tenho o modal de edição visível
         And preencho o campo "Data de nascimento" com <tipoValorData>
-        When clico no botão "Salvar"
+        When clico no botão Salvar
         Then devo ver a mensagem "Data inválida"
         Examples:
             | TC | tipoValorData |
@@ -183,13 +183,13 @@ Feature: Editar usuário
     Scenario: [TC-53] - Inserir empresa inexistente
         Given que eu tenho o modal de edição visível
         And preencho o campo "Empresas" com "EmpresaInexistente"
-        When clico no botão "Salvar"
+        When clico no botão Salvar
         Then devo ver a mensagem "Empresa não cadastrada"
 
     Scenario: [TC-54] - Inserir E-mail com formato inválido
         Given que eu tenho o modal de edição visível
         And preencho o campo "Email" com "emailInválido"
-        When clico no botão "Salvar"
+        When clico no botão Salvar
         Then devo ver a mensagem "Formato de E-mail inválido"
 
     Scenario: [TC-55] - Verificar ícone

@@ -9,14 +9,15 @@ Feature: Deletar usuário
 
     @focus
     Scenario: [TC-56] - Verificar apresentação e fechamento do modal de Delete
-        Given que eu tenho o botão "delete" apresentado na listagem
-        When clico no botão "delete" do primeiro item da listagem
+        Given que eu tenho o botão de deletar apresentado na listagem
+        When eu clico no botão deletar do primeiro item da listagem
         Then o sweet alert fica visível
-        And o texto "Sucesso" é apresentado
-        And o texto "Usuário deletado com sucesso!" é apresentado
-        When clico no botão "OK"
+        And o texto "Sucesso" é apresentado no sweet alert
+        And o texto "Usuário deletado com sucesso!" é apresentado no sweet alert
+        When clico no botão de confirmar do sweet alert
         Then o sweet alert fica invisível
 
+    # @focus
     Scenario: [TC-57] - Verificar se o usuário não é mais apresentado
         Given que eu cliquei em deletar usário
         Then o usuário selecionado não deve ser mais apresentado na listagem
