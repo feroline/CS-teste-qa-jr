@@ -18,7 +18,7 @@ Feature: Deletar usuário
 
     # @focus
     Scenario: [TC-57] - Verificar se o usuário não é mais apresentado
-        Given que eu cliquei em deletar usário
+        Given que eu cliquei em deletar usuário
         Then o usuário selecionado não deve ser mais apresentado na listagem
 
     Scenario: [TC-58] - Verificar ícone

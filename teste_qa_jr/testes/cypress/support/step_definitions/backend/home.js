@@ -3,7 +3,6 @@
 import { Given, Then } from '@badeball/cypress-cucumber-preprocessor';
 import { getResponse, setResponse } from './functions';
 
-// FIXME: corrigir linha abaixo adicionando ao arquivo de configuração
 const backendBaseUrl = Cypress.env('baseUrlBackend');
 
 Given('que a rota base está OK', () => {

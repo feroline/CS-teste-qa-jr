@@ -6,7 +6,7 @@ Feature: Criar usuário
     Given que acesso a url "http://localhost:5400"
 
   @focus
-  Scenario: [TC-O6] - Verificar apresentação e fechamento do modal de Cadastro
+  Scenario: [TC-06] - Verificar apresentação e fechamento do modal de Cadastro
     Given que clico no botão de adicionar usuário
     Then o modal fica visível
     And o texto "Cadastrar novo usuário" é apresentado
@@ -15,7 +15,7 @@ Feature: Criar usuário
 
   @focus
   Scenario:[TC-07] - Cadastrar usuário com todos os dados e verificar cadastro
-    And que eu tenho o modal de cadastro visível
+    Given que eu tenho o modal de cadastro visível
     When preencho os campos com os dados
       | nome  | email           | telefone    | cidade         | data       | empresas  |
       | Maria | email@gmail.com | 65897584685 | Porto Nacional | 2001-02-23 | Empresa 1 |
@@ -162,6 +162,8 @@ Feature: Criar usuário
     When clico no botão Salvar
     Then devo ver a mensagem "Preencha este campo"
 
+  #  A data não foi passada explicitamente porque o método deve pegar a data do
+  # sistema para inserir
   Scenario Outline: [TC-26] [TC-27] - Inserir datas inválidas em Data de Nascimento
     Given que eu tenho o modal de cadastro visível
     And preencho o campo "Data de nascimento" com <tipoValorData>

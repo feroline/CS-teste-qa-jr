@@ -7,7 +7,7 @@ Feature: Leitura dos dados Home
     Given que acesso a url "http://localhost:5400"
 
   @focus
-  Scenario: [TC-O1] - Verificar URL
+  Scenario: [TC-01] - Verificar URL
     Given que estou na tela inicial
     When acesso "/home"
     Then a url deve conter "/home" em seu caminho

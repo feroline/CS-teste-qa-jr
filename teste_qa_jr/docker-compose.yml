@@ -50,9 +50,6 @@ services:
   image: cypress/included:13.13.2
   build: ./testes
   container_name: cypress-e2e-testes
-  # environment:
-  #   - CYPRESS_baseUrl=http://frontend
-  #   - CYPRESS_backendUrl=http://backend
   depends_on:
    - frontend
    - backend
