@@ -1,6 +1,6 @@
 /// <reference types="cypress"/>
 
-import { Given, When, Then } from '@badeball/cypress-cucumber-preprocessor';
+import { Given, Then } from '@badeball/cypress-cucumber-preprocessor';
 
 import {
 	getResponse,
