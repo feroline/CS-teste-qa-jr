@@ -16,7 +16,7 @@ Feature: Users
     ####### Get User by ID #######
     @focus
     Scenario: [TC-61] - Get User by ID - Pegar usuário com ID existente
-        Given que estou na rota Get User by ID com ID "33"
+        Given que estou na rota Get User by ID com ID "30"
         Then devo receber o código "200" da rota user
 
     @focus

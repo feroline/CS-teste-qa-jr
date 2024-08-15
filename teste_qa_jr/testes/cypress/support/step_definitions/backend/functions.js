@@ -18,3 +18,8 @@ export const [
 		objectID = id;
 	},
 ] = '';
+
+// TODO: implementar função a seguir nos cenários necessários
+export const mountRouteByID = (rota, id) => {
+	return rota.replace('{id}', id);
+}

@@ -10,4 +10,6 @@
 
 #### 4. Cadastro de Bug's, Sugestões de Melhorias e Relatório Final
 
+#### 5. API Routes com Imnsomnia
+
 #### A forma mais fácil de executar os testes automatizados é com o Docker-compose, para isso acesse a pasta '/teste_qa_jr e execute o comando `docker-compose up --build -d` .

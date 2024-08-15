@@ -10,6 +10,7 @@ import {
 } from './functions';
 
 // TODO: colocar urls {{baseUrl}}/{{api}}/{{user}} no env
+// TODO: Adicionar mock
 
 // api/user está sendo validado em uma função mais genérica
 const getUserByID = `${Cypress.env('baseUrlBackend')}/api/user/{id}`;
