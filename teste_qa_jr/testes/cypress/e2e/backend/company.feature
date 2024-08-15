@@ -30,48 +30,48 @@ Feature: Company
     ####### Create Company #######
     Scenario: [TC-79] - Create Company - Criar compania com todos os dados obrigatórios
         Given que estou na rota "/api/company/create"
-        And tenho o objeto da fixture "/company/post/post_201.json" como body
+        Given tenho o objeto da fixture "/company/post/post_201.json" como body
         Then devo receber os dados do objeto da fixture "/company/post_response.json" como resposta
         And devo receber o código "201"
 
     Scenario: [TC-80] - Create Company - Criar compania sem todos os dados obrigatórios
         Given que estou na rota "/api/company/create"
-        And tenho o objeto da fixture "/company/post/post_400.json" como body
+        Given tenho o objeto da fixture "/company/post/post_400.json" como body
         Then devo receber o objeto da fixture "/mensagens/invalidData_400.json" como resposta
         And devo receber o código "400"
 
     Scenario: [TC-81] - Create Company - Criar compania com dados inválidos no body
         Given que estou na rota "/api/company/create"
-        And tenho o objeto da fixture "/company/post/post_500.json" como body
+        Given tenho o objeto da fixture "/company/post/post_500.json" como body
         Then devo receber o código "500"
 
     ####### Update Company #######
     Scenario: [TC-82] - Update Company - Atualizar compania com todos os dados obrigatórios e ID válido
         Given que estou na rota "/api/company/{id}/update" com ID "12"
-        And tenho o objeto da fixture "/company/update/update_200.json" como body
+        Given tenho o objeto da fixture "/company/update/update_200.json" como body
         Then devo receber os dados do objeto da fixture "/company/update_response.json" como resposta
         And devo receber o código "200"
 
     Scenario: [TC-83] - Update Company - Atualizar compania com ID inexistente
         Given que estou na rota "/api/company/{id}/update" com ID "0"
-        And tenho o objeto da fixture "/company/update/update_200.json" como body
+        Given tenho o objeto da fixture "/company/update/update_200.json" como body
         Then devo receber o objeto da fixture "/mensagens/invalidData_400.json" como resposta
         And devo receber o código "400"
 
     Scenario: [TC-84] - Update Company - Atualizar compania com ID inválido
         Given que estou na rota "/api/company/{id}/update" com ID "?id"
-        And tenho o objeto da fixture "/company/post/post_201.json" como body
+        Given tenho o objeto da fixture "/company/post/post_201.json" como body
         Then devo receber o código "405"
 
     Scenario: [TC-85] - Update Company - Atualizar compania sem todos os dados obrigatórios
         Given que estou na rota "/api/company/{id}/update" com ID "12"
-        And tenho o objeto da fixture "/company/update/update_400.json" como body
+        Given tenho o objeto da fixture "/company/update/update_400.json" como body
         Then devo receber o objeto da fixture "/mensagens/invalidData_400.json" como resposta
         And devo receber o código "400"
 
     Scenario: [TC-86] - Update Company - Atualizar compania com dados inválidos no body
         Given que estou na rota "/api/company/{id}/update" com ID "12"
-        And tenho o objeto da fixture "/company/update/post_500.json" como body
+        Given tenho o objeto da fixture "/company/update/post_500.json" como body
         Then devo receber o código "500"
 
     ####### Delete Company #######

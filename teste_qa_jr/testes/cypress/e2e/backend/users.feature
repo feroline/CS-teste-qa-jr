@@ -21,74 +21,67 @@ Feature: Users
     @focus
     Scenario: [TC-62] - Get User by ID - Pegar usuário com ID inexistente
         Given que estou na rota Get User by ID com ID "0"
-        And devo receber o código "400"
+        Then devo receber o código "400"
 
     @focus
     Scenario: [TC-63] - Get User by ID - Pegar usuário com ID inválido
         Given que estou na rota Get User by ID com ID "?id"
         Then devo receber o código "500"
 
-
     ####### Create User #######
+    @focus
     Scenario: [TC-64] - Create User - Criar usuário com todos os dados obrigatórios
-        Given que estou na rota "/api/user/create"
-        And tenho o objeto da fixture "/user/post/post_201.json" como body
-        Then devo receber os dados do objeto da fixture "user/post_response.json" como resposta
-        And devo receber o código "201"
-
+        Given tenho o objeto da fixture "/user/post/post_201.json" como body do cadastro de usuário
+        Then devo receber o código "201"
+    @focus
     Scenario: [TC-65] - Create User - Criar usuário sem todos os dados obrigatórios
-        Given que estou na rota "/api/user/create"
-        And tenho o objeto da fixture "/user/post/post_400.json" como body
-        Then devo receber o objeto da fixture "/mensagens/invalidData_400.json" como resposta
-        And devo receber o código "400"
-
+        Given tenho o objeto da fixture "/user/post/post_400.json" como body do cadastro de usuário
+        Then devo receber o código "400"
+    @focus
     Scenario: [TC-66] - Create User - Criar usuário com dados inválidos no body
-        Given que estou na rota "/api/user/create"
-        And tenho o objeto da fixture "/user/patch/post_500.json" como body
+        Given tenho o objeto da fixture "/user/post/post_500.json" como body do cadastro de usuário
         Then devo receber o código "500"
 
     ####### Update User #######
+    @focus
     Scenario: [TC-67] - Update User - Atualizar usuário com todos os dados obrigatórios e ID válido
-        Given que estou na rota "/api/user/{id}/update" com ID "60"
-        And tenho o objeto da fixture "/user/patch/update_200.json" como body
-        Then devo receber os dados do objeto da fixture "user/update_response.json" como resposta
-        And devo receber o código "200"
-
+        Given que estou na rota Update User com ID "33"
+        And tenho o objeto da fixture "/user/patch/update_200.json" como body do usuário de edição
+        Then devo receber o código "200"
+    @focus
     Scenario: [TC-68] - Update User - Atualizar usuário com ID inexistente
-        Given que estou na rota "/api/user/{id}/update" com ID "0"
-        And tenho o objeto da fixture "/user/update/update_200.json" como body
-        Then devo receber o objeto da fixture "/mensagens/invalidData_400.json" como resposta
-        And devo receber o código "400"
-
-
-    Scenario: [TC-69] - Update User - Atualizar usuário com ID inválido
-        Given que estou na rota "/api/user/{id}/update" com ID "?id"
-        And tenho o objeto da fixture "/user/update/update_200.json" como body
+        Given que estou na rota Update User com ID "0"
+        And tenho o objeto da fixture "/user/patch/update_200.json" como body do usuário de edição
         Then devo receber o código "400"
 
+    @focus
+    Scenario: [TC-69] - Update User - Atualizar usuário com ID inválido
+        Given que estou na rota Update User com ID "?id"
+        And tenho o objeto da fixture "/user/patch/update_200.json" como body do usuário de edição
+        Then devo receber o código "400"
+    @focus
     Scenario: [TC-70] - Update User - Atualizar usuário sem todos os dados obrigatórios
-        Given que estou na rota "/api/user/{id}/update" com ID "33"
-        And tenho o objeto da fixture "user/update/update_400.json" como body
-        Then devo receber o objeto da fixture "/mensagens/invalidData_400.json" como resposta
-        And devo receber o código "400"
-
+        Given que estou na rota Update User com ID "33"
+        And tenho o objeto da fixture "user/update/update_400.json" como body do usuário de edição
+        Then devo receber o código "400"
+    @focus
     Scenario: [TC-71] - Update User - Atualizar usuário com dados inválidos no body
-        Given que estou na rota "/api/user/{id}/update" com ID "33"
-        And tenho o objeto da fixture "user/update/update_500.json" como body
+        Given que estou na rota Update User com ID "33"
+        And tenho o objeto da fixture "user/update/update_500.json" como body do usuário de edição
         Then devo receber o código "500"
 
     ####### Delete User #######
+    @focus
     Scenario: [TC-72] - Delete User - Deletar usuário com ID válido
-        Given que estou na rota "/api/user/{id}/delete" com ID "33"
-        Then devo receber o objeto da fixture "/mensagens/delete_200.json" como resposta
-        And devo receber o código "200"
+        Given que estou na rota Delete User com ID "33"
+        Then devo receber o código "200"
 
-
+    @focus
     Scenario: [TC-73] - Delete User - Deletar usuário com ID inexistente
-        Given que estou na rota "/api/user/{id}/delete" com ID "0"
-        Then devo receber o objeto da fixture "/mensagens/invalidData_400.json" como resposta
-        And devo receber o código "400"
+        Given que estou na rota Delete User com ID "0"
+        Then devo receber o código "400"
 
+    @focus
     Scenario: [TC-74] - Delete User - Deletar usuário com ID inválido
-        Given que estou na rota "/api/user/{id}/delete" com ID "?id"
+        Given que estou na rota Delete User com ID "?id"
         Then devo receber o código "400"

@@ -1,4 +1,5 @@
 let requestResponse = {};
+let objectID = '';
 
 export const [
 	getResponse = () => {
@@ -6,5 +7,14 @@ export const [
 	},
 	setResponse = (response) => {
 		requestResponse = response;
+	},
+] = '';
+
+export const [
+	getObjectID = () => {
+		return objectID;
+	},
+	setObjectID = (id) => {
+		objectID = id;
 	},
 ] = '';
