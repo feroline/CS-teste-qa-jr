@@ -10,7 +10,8 @@ import {
 } from './functions';
 
 // TODO: colocar urls {{baseUrl}}/{{api}}/{{user}} no env
-const urlAllUsers = `${Cypress.env('baseUrlBackend')}/api/user`;
+
+// api/user está sendo validado em uma função mais genérica
 const getUserByID = `${Cypress.env('baseUrlBackend')}/api/user/{id}`;
 const createUser = `${Cypress.env('baseUrlBackend')}/api/user/create`;
 const updateUser = `${Cypress.env('baseUrlBackend')}/api/user/{id}/update`;
