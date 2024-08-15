@@ -1,6 +1,6 @@
 # CS-teste-qa-jr
 
-### Documentação associados
+### Documentos associados
 
 #### 1. Plano de Testes
 
